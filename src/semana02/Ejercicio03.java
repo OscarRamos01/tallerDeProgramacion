@@ -4,6 +4,7 @@ package semana02;
 /**
  *
  * Escribir un programa que imprima un ticket de operación de un agente bancario.
+ * 
  */
 
 import java.util.Scanner;
