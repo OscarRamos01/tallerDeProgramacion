@@ -7,26 +7,36 @@ package semana02;
 
 import java.util.Scanner;
 
-public class Ejercicio01 {   
-    public static void main(String[] args) {
-        String nombrePasajero, ciudadOrigen, ciudadDestino, fechaViaje, numeroAsiento;
-        double precioBoleto=0;
+public class Ejercicio01 {
+    public static void main(String[] arg){
+        String nombre,destino,fecha;
+        int numeroAsiento;
+        float precio;
         Scanner lectura = new Scanner(System.in);
-        System.out.println("********** BOLETO DE VIAJE INTERPROVINCIAL **********");
-        System.out.print("Nombre del pasajero: "); 
-        nombrePasajero = lectura.next();       
-        System.out.print("Ciudad de origen: "); 
-        ciudadOrigen = lectura.next();
-        System.out.print("Ciudad de destino: " ); 
-        ciudadDestino = lectura.next();
-        System.out.print("Fecha de viaje: " ); 
-        fechaViaje = lectura.next();
-        System.out.print("Número de asiento: " ); 
-        numeroAsiento = lectura.next();
-        System.out.println("*****************************************************");
-        System.out.print("Precio del boleto: " ); 
-        precioBoleto = lectura.nextDouble();
-        System.out.println("*****************************************************");
-        System.out.println("¡Gracias por elegir nuestro servicio! Buen viaje.");
+
+        // Solicitar datos del viaje
+        System.out.print("Ingresa tu nombre: ");
+        nombre = lectura.nextLine().toUpperCase();
+
+        System.out.print("Ingresa tu destino: ");
+        destino = lectura.nextLine().toUpperCase();
+
+        System.out.print("Ingresa el número de asiento: ");
+        numeroAsiento = lectura.nextInt();
+
+        System.out.print("Ingresa el precio del boleto: ");
+        precio = lectura.nextFloat();
+
+        System.out.print("Ingresa la fecha del viaje (dd/mm/yyyy): ");
+        fecha = lectura.next().toLowerCase();
+
+        // Imprimir boleto de viaje
+        System.out.println("\n********** BOLETO DE VIAJE **********");
+        System.out.println("Nombre del pasajero: " + nombre);
+        System.out.println("Destino: " + destino);
+        System.out.println("Número de asiento: " + numeroAsiento);
+        System.out.printf("Precio del boleto: %.2f\n", precio);
+        System.out.println("Fecha de viaje: " + fecha);
+        System.out.println("*************************************");
     }
 }
