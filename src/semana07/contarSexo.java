@@ -2,8 +2,9 @@
 package semana07;
 
 /**
- *
- * @author HP USER
+ *Crear un programa en Java que permita ingresar la edad, sexo de las personas y preguntar al 
+ *usuario si desea continuar o finalizar con el proceso de registro de datos.
+ *Visualizar la cantidad de alumno y el promedio de edad, la cantidad de alumnos de sexo masculino y femenino.
  */
 import java.util.Scanner; 
 public class contarSexo {
@@ -39,11 +40,11 @@ public class contarSexo {
                    System.out.println("Solo se debe ingresar si o no");
                }
            }while(estado);
-            pe=se/cp;
+            pe=cp;
         }while(rpta.equals("si"));
         //Salidas de datos
         System.out.println("Cantidad de personas de sexo m:"+cpsm);
         System.out.println("Cantidad de personas de sexo f:"+cpsf);
-        System.out.println("Cantidad de personas de sexo m:"+pe);
+        System.out.println("Cantidad de alumnos:"+pe);
     }    
 }
